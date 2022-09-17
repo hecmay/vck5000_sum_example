@@ -34,7 +34,7 @@ libadf.a: src/*
 	@echo "INFO:Running aiecompiler for hw..."
 	@rm -rf Work libadf.a
 	@mkdir -p Work
-	@aiecompiler --target=hw --include="src" --workdir=./Work src/graph.cpp
+	@aiecompiler --target=hw --include="src" --include="${HOME}/install/usr/include/" --workdir=./Work src/graph.cpp
 
 .PHONY: aie_compile_x86
 aie_compile_x86: 
